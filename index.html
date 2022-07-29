@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ----------------SEO-Optimization---------------- -->
+    <meta name=“description” content="myPlace, a informational travel website for University Place, Washington. Covering parks, beaches, restaruants, and more." />
+    <meta name="keywords" content="myPlace, University Place, Washington, Travel, Parks, Beaches, Restaruants">
+    <meta name="author" content="myPlace">
+    <!-- Google Site Verification -->
+    <meta name="google-site-verification" content="DogpcsIsv8MfOJNDSMVMBvUm1QvIUQ4CYFODmIn3haI"/>
+    <!-- ----------------SEO-Optimization---------------- -->
+    <title>myPlace | University Place</title>
+    <!-- Google Fonts -->
+    <!-- Quicksand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/b1974bca5b.js" crossorigin="anonymous"></script>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/masonry/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/carousel/">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-box">
+                <div class="header-text">
+                    <h1>Discover the best places around University Place</h1>
+                    <h4>Take a look at the top places to visit when you're in town</h4>
+                </div>
+                <div class="header-button">
+                    <a href="#about" class="btn-purple">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Bar -->
+    <div class="bar">
+        <div class="bar__content u-centered">
+            <img class="bar__logo" src="img/myplace-logo-01.png" alt="logo image">
+            <input type="checkbox" id="inpNavToggle">
+            <label class="bar__nav-toggle" for="inpNavToggle">
+                <i class="material-icons">menu</i>
+            </label>
+            <nav class="nav">
+                <a class="nav__link" href="#header">Home</a>
+                <a class="nav__link" href="#about">About</a>
+                <a class="nav__link" href="#map">Gallery</a>
+                <a class="nav__link" href="#place">Locations</a>
+                <a class="btn-purple" href="#place">View Places</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Header Javascript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver(entries => {
+                document.querySelector(".bar").classList.toggle("bar--bg", entries[0].intersectionRatio < 1)
+            }, {
+                threshold: 0.9
+            });
+            
+            observer.observe(document.querySelector(".header"));
+        });
+        </script>
+
+<!-- About Section -->
+<section class="about" id="about">
+    <div class="container">
+        <div class="about-box">
+            <div class="about-image">
+                <img src="img/about-bg.png" alt="about image">
+            </div>
+            <div class="about-text">
+                <h4>About</h4>
+                <h2>Various parks and beaches in the nice area</h2>
+                <p>University Place has beautiful parks and beaches everywhere. Whether you want to go on a walk or have fun and play with kids, you're set.</p>
+                <div class="about-button">
+                    <a href="#about2" class="btn-purple">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About2 Section -->
+<section class="about2" id="about2">
+    <div class="container">
+        <div class="about2-box">
+            <div class="about2-image">
+                <img src="img/about-bg2.jpeg" alt="about image">
+            </div>
+            <div class="about2-text">
+                <h4>About</h4>
+                <h2>Beatiful quality restaruants throughout the area</h2>
+                <p>University Place has plenty of quality restaruants. Whether you want a quick bite at a cafe or sit down at with a nice view, it's there.</p>
+                <div class="about2-button">
+                    <a href="#map" class="btn-purple">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="map" id="map">
+    <div class="container">
+        <h4>Info</h4>
+        <h2>Travel all over University Place near beaches, golf courses, restaruants and more</h2>
+        <div class="map-overlay">
+            <img src="img/world-bg-01.png" alt="">
+            <div class="map-bubble">
+                <div class="map-text">
+                    <h3>University Place</h3>
+                <h5>Travel anywhere</h5>
+                </div>
+                <div class="map-button-box">
+                    <div class="map-button">
+                        <a href="#gallery-content" class="btn-purple-transparent">View Gallery</a>
+                    </div>
+                    <div class="map-button">
+                        <a href="#place" class="btn-purple">View places</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Showcase Section -->
+<section class="showcase" id="showcase">
+    <div class="container">
+        <div class="showcase-bubble">
+            <h4>Best Place</h4>
+            <h2>Enjoy Chambers Bay on the beach</h2>
+            <div class="showcase-info">
+                <div class="showcase-detail">
+                    <h3>3.4 Miles</h3>
+                </div>
+                <div class="showcase-button">
+                    <a href="#showcase-content" class="btn-purple">View Details</a>
+                </div>
+                <div class="showcase-detail">
+                    <h3>Golf & Beach</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- place Section -->
+<section class="place" id="place">
+    <div class="container">
+        <h4>Locations</h4>
+        <h2>Featured places</h2>
+        <div class="place-box">
+            
+            <!-- Bootstrap Card -->
+            <div id="place-card">
+                <div class="place-image">
+                    <img src="img/chambers2.jpeg" alt="chambers bay image">
+                </div>
+                <div id="place-body">
+                    <div class="card-header">
+                        <h5>Chambers Bay</h5>
+                        <h6>3.4 Miles</h6>
+                    </div>
+                    <div class="card-tags">
+                        <div class="tag">
+                            <div class="tag-icon">
+                                <i class="material-symbols-outlined">nature</i>
+                            </div>
+                            <div class="tag-text">
+                                <p>Park</p>
+                            </div>
+                        </div>
+                        <div class="tag-button">
+                            <a href="#info-content">
+                                <div class="tag-symbol">
+                                    <i class="material-symbols-outlined">info</i>
+                                </div>
+                                <div class="tag-button-link">
+                                    <p>More Info</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bootstrap Card -->
+            <div id="place-card">
+                <div class="place-image">
+                    <img src="img/playground1.jpeg" alt="playground by the sound image">
+                </div>
+                <div id="place-body">
+                    <div class="card-header">
+                        <h5>Playground Sound</h5>
+                        <h6>2.2 Miles</h6>
+                    </div>
+                    <div class="card-tags">
+                        <div class="tag">
+                            <div class="tag-icon">
+                                <i class="material-symbols-outlined">nature</i>
+                            </div>
+                            <div class="tag-text">
+                                <p>Park</p>
+                            </div>
+                        </div>
+                        <div class="tag-button">
+                            <a href="#info2-content">
+                                <div class="tag-symbol">
+                                    <i class="material-symbols-outlined">info</i>
+                                </div>
+                                <div class="tag-button-link">
+                                    <p>More Info</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bootstrap Card -->
+            <div id="place-card">
+                <div class="place-image">
+                    <img src="img/titlow1.jpeg" alt="titlow beach image">
+                </div>
+                <div id="place-body">
+                    <div class="card-header">
+                        <h5>Titlow Beach</h5>
+                        <h6>1.0 Miles</h6>
+                    </div>
+                    <div class="card-tags">
+                        <div class="tag">
+                            <div class="tag-icon">
+                                <i class="material-symbols-outlined">nature</i>
+                            </div>
+                            <div class="tag-text">
+                                <p>Park</p>
+                            </div>
+                        </div>
+                        <div class="tag-button">
+                            <a href="#info3-content">
+                                <div class="tag-symbol">
+                                    <i class="material-symbols-outlined">info</i>
+                                </div>
+                                <div class="tag-button-link">
+                                    <p>More Info</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bootstrap Card -->
+            <div id="place-card">
+                <div class="place-image">
+                    <img src="img/curran1.jpeg" alt="curran apple orchard image">
+                </div>
+                <div id="place-body">
+                    <div class="card-header">
+                        <h5>Curran Apple Orchard</h5>
+                        <h6>1.3 Miles</h6>
+                    </div>
+                    <div class="card-tags">
+                        <div class="tag">
+                            <div class="tag-icon">
+                                <i class="material-symbols-outlined">nature</i>
+                            </div>
+                            <div class="tag-text">
+                                <p>Park</p>
+                            </div>
+                        </div>
+                        <div class="tag-button">
+                            <a href="#info4-content">
+                                <div class="tag-symbol">
+                                    <i class="material-symbols-outlined">info</i>
+                                </div>
+                                <div class="tag-button-link">
+                                    <p>More Info</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bootstrap Card -->
+            <div id="place-card">
+                <div class="place-image">
+                    <img src="img/sapporo1.jpeg" alt="sapporo steakhouse image">
+                </div>
+                <div id="place-body">
+                    <div class="card-header">
+                        <h5>Sapporo Steakhouse</h5>
+                        <h6>1.6 Miles</h6>
+                    </div>
+                    <div class="card-tags">
+                        <div class="tag">
+                            <div class="tag-icon">
+                                <i class="material-symbols-outlined">nature</i>
+                            </div>
+                            <div class="tag-text">
+                                <p>Park</p>
+                            </div>
+                        </div>
+                        <div class="tag-button">
+                            <a href="#info5-content">
+                                <div class="tag-symbol">
+                                    <i class="material-symbols-outlined">info</i>
+                                </div>
+                                <div class="tag-button-link">
+                                    <p>More Info</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bootstrap Card -->
+            <div id="place-card">
+                <div class="place-image">
+                    <img src="img/thirsty1.jpeg" alt="Thirsty Hound Drinkery image">
+                </div>
+                <div id="place-body">
+                    <div class="card-header">
+                        <h5>Thirsty Hound Drinkery</h5>
+                        <h6>1.1 Miles</h6>
+                    </div>
+                    <div class="card-tags">
+                        <div class="tag">
+                            <div class="tag-icon">
+                                <i class="material-symbols-outlined">nature</i>
+                            </div>
+                            <div class="tag-text">
+                                <p>Park</p>
+                            </div>
+                        </div>
+                        <div class="tag-button">
+                            <a href="#info6-content">
+                                <div class="tag-symbol">
+                                    <i class="material-symbols-outlined">info</i>
+                                </div>
+                                <div class="tag-button-link">
+                                    <p>More Info</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bootstrap Card -->
+            <div id="place-card">
+                <div class="place-image">
+                    <img src="img/boathouse1.jpeg" alt="boathouse 19 image">
+                </div>
+                <div id="place-body">
+                    <div class="card-header">
+                        <h5>Boathouse 19</h5>
+                        <h6>0.9 Miles</h6>
+                    </div>
+                    <div class="card-tags">
+                        <div class="tag">
+                            <div class="tag-icon">
+                                <i class="material-symbols-outlined">nature</i>
+                            </div>
+                            <div class="tag-text">
+                                <p>Park</p>
+                            </div>
+                        </div>
+                        <div class="tag-button">
+                            <a href="#info7-content">
+                                <div class="tag-symbol">
+                                    <i class="material-symbols-outlined">info</i>
+                                </div>
+                                <div class="tag-button-link">
+                                    <p>More Info</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bootstrap Card -->
+            <div id="place-card">
+                <div class="place-image">
+                    <img src="img/happyduo1.jpeg" alt="happy duo cafe image">
+                </div>
+                <div id="place-body">
+                    <div class="card-header">
+                        <h5>Happy Duo Cafe</h5>
+                        <h6>1.3 Miles</h6>
+                    </div>
+                    <div class="card-tags">
+                        <div class="tag">
+                            <div class="tag-icon">
+                                <i class="material-symbols-outlined">nature</i>
+                            </div>
+                            <div class="tag-text">
+                                <p>Park</p>
+                            </div>
+                        </div>
+                        <div class="tag-button">
+                            <a href="#info8-content">
+                                <div class="tag-symbol">
+                                    <i class="material-symbols-outlined">info</i>
+                                </div>
+                                <div class="tag-button-link">
+                                    <p>More Info</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Banner Section -->
+<!-- <section class="banner" id="banner">
+    <div class="container">
+        <div class="banner-box">
+            <div class="banner-text">
+                <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, provident!</h2>
+            </div>
+            <div class="banner-button">
+                <a href="#" class="btn-black">Join Community</a>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- Footer Section -->
+<section class="footer" id="footer">
+    <div class="container">
+        <div class="footer-box">
+            <div class="footer-box-company">
+                <img src="img/myplace-logo-02.png" alt="logo image">
+                <p>GRAY Marketing Solutions is a digital marketing agency that creates entrepreneurs by taking their business to the next level.</p>
+                <p>Copyright © 2022 Gray Marketing Solutions - All rights reserved.</p>
+            </div>
+            <div class="footer-box-links">
+                <h3>Site Map</h3>
+                <ul>
+                    <a href="#header"><li>Home</li></a>
+                    <a href="#services"><li>About</li></a>
+                    <a href="#pricing"><li>Gallery</li></a>
+                    <a href="#specials"><li>Locations</li></a>
+                </ul>
+            </div>
+            <div class="footer-box-socials">
+                <h3>Social Media</h3>
+                <a href="#" target="_blank"><li><i class="fab fa-instagram"></i></li></a>
+                <a href="#" target="_blank"><li><i class="fab fa-facebook-f"></i></li></a>
+                <a href="#" target="_blank"><li><i class="fab fa-twitter"></i></li></a>
+                <a href="#" target="_blank"><li><i class="fab fa-linkedin"></i></li></a>
+            </div>
+            <div class="footer-box-development">
+                <h3>Contact Info</h3>
+                <a href="tel:#"><li>(111) 222 - 3332</li></a>
+                <a href="mailto:#"><li>info@info.com</li></a>
+                <a href="https://dangelominnis.com"><li>Developed By D'Angelo Minnis</li></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- --------------------- MODALS -------------------- -->
+<!-- Boiler Plate -->
+<!-- <div id="target-content">
+    <a href="#" class="close"></a>
+    <div id="target-inner">
+      <h2>Modal Heading</h2>
+      <p>Modal Content</p>
+    </div>
+</div> -->
+
+<!-- start of gallery modal -->
+<!-- <div id="target-content">
+    <a href="#" class="close"></a>
+    <div id="target-inner">
+      <h2>Modal Heading</h2>
+      <p>Modal Content</p>
+    </div>
+</div> -->
+<!-- end of gallery modal -->
+
+
+<!-- start of gallery modal -->
+<div id="gallery-content">
+    <a href="#map" class="close"></a>
+    <div id="gallery-inner">
+        <h2>Chambers Bay</h2>
+        <div class="gallery-image-box">
+            <img src="img/chambers2.jpeg" alt="Chambers Bay image">
+            <img src="img/chambers1.jpeg" alt="Chambers Bay image">
+            <img src="img/chambers3.jpeg" alt="Chambers Bay image">
+            <img src="img/chambers4.jpeg" alt="Chambers Bay image">
+        </div>
+        <h2>Playground By The Sound</h2>
+        <div class="gallery-image-box">
+            <img src="img/playground1.jpeg" alt="Playground By The Sound image">
+            <img src="img/playground2.jpeg" alt="Playground By The Sound image">
+            <img src="img/playground3.jpeg" alt="Playground By The Sound image">
+            <img src="img/playground4.jpeg" alt="Playground By The Sound image">
+        </div>
+        <h2>Titlow Beach</h2>
+        <div class="gallery-image-box">
+            <img src="img/titlow4.jpeg" alt="titlow beach image">
+            <img src="img/titlow3.jpeg" alt="titlow beach image">
+            <img src="img/titlow2.jpeg" alt="titlow beach image">
+            <img src="img/titlow1.jpeg" alt="titlow beach image">
+        </div>
+        <h2>Curran Apple Orchard</h2>
+        <div class="gallery-image-box">
+            <img src="img/curran1.jpeg" alt="curran apple orchard image">
+            <img src="img/curran2.jpeg" alt="curran apple orchard image">
+            <img src="img/curran3.jpeg" alt="curran apple orchard image">
+            <img src="img/curran4.jpeg" alt="curran apple orchard image">
+        </div>
+        <h2>Sapporo Steakhouse</h2>
+        <div class="gallery-image-box">
+            <img src="img/sapporo1.jpeg" alt="sapporo steakhouse image">
+            <img src="img/sapporo2.jpeg" alt="sapporo steakhouse image">
+            <img src="img/sapporo3.jpeg" alt="sapporo steakhouse image">
+            <img src="img/sapporo4.jpeg" alt="sapporo steakhouse image">
+        </div>
+        <h2>Thirsty Hound Drinkery</h2>
+        <div class="gallery-image-box">
+            <img src="img/thirsty1.jpeg" alt="Thirsty Hound Drinkery image">
+            <img src="img/thirsty2.jpeg" alt="Thirsty Hound Drinkery image">
+            <img src="img/thirsty3.jpeg" alt="Thirsty Hound Drinkery image">
+            <img src="img/thirsty4.jpeg" alt="Thirsty Hound Drinkery image">
+        </div>
+        <h2>Boathouse 19</h2>
+        <div class="gallery-image-box">
+            <img src="img/boathouse1.jpeg" alt="boathouse 19 image">
+            <img src="img/boathouse2.jpeg" alt="boathouse 19 image">
+            <img src="img/boathouse3.jpeg" alt="boathouse 19 image">
+            <img src="img/boathouse4.jpeg" alt="boathouse 19 image">
+        </div>
+        <h2>Happy Duo Cafe</h2>
+        <div class="gallery-image-box">
+            <img src="img/happyduo1.jpeg" alt="happy duo cafe image">
+            <img src="img/happyduo2.jpeg" alt="happy duo cafe image">
+            <img src="img/happyduo3.jpeg" alt="happy duo cafe image">
+            <img src="img/happyduo4.jpeg" alt="happy duo cafe image">
+        </div>
+    </div>
+</div>
+<!-- end of gallery modal -->
+
+
+<!-- start of showcase modal -->
+<div id="showcase-content">
+    <a href="#showcase" class="close"></a>
+    <div id="showcase-inner">
+        <h2>Chambers Bay</h2>
+        <div class="info-button">
+            <a href="#" class="btn-purple">6320 Grandview Dr W University Place, WA 98467</a>
+        </div>
+        <h4><span>Distance:</span> 3.4 Miles</h4>
+        <div class="info-box">
+            <div class="info-image-box">
+                <img src="img/chambers2.jpeg" alt="Chambers Bay image">
+                <img src="img/chambers1.jpeg" alt="Chambers Bay image">
+                <img src="img/chambers3.jpeg" alt="Chambers Bay image">
+                <img src="img/chambers4.jpeg" alt="Chambers Bay image">
+            </div>
+            <div class="info-text">
+                <h3>Description</h3>
+                <p>Chambers Bay will provide players with a world-class golf experience unmatched in the Pacific Northwest. The links design, terrain, elevation changes, natural beauty and panoramic views of Puget Sound of will make Chambers Bay a "must play" for Pierce County residents, visitors and tourists.</p>
+                <h3>Fun things to do</h3>
+                <ul>
+                    <li>○ Waterfront View</li>
+                    <li>○ Golf Course</li>
+                    <li>○ Good For Kids</li>
+                    <li>○ Private Lot Parking</li>
+                    <li>○ Bike Parking</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of showcase modal -->
+
+
+<!-- start of info1 modal -->
+<div id="info-content">
+    <a href="#place" class="close"></a>
+    <div id="info-inner">
+        <h2>Chambers Bay</h2>
+        <div class="info-button">
+            <a href="#" class="btn-purple">6320 Grandview Dr W University Place, WA 98467</a>
+        </div>
+        <h4><span>Distance:</span> 3.4 Miles</h4>
+        <div class="info-box">
+            <div class="info-image-box">
+                <img src="img/chambers2.jpeg" alt="Chambers Bay image">
+                <img src="img/chambers1.jpeg" alt="Chambers Bay image">
+                <img src="img/chambers3.jpeg" alt="Chambers Bay image">
+                <img src="img/chambers4.jpeg" alt="Chambers Bay image">
+            </div>
+            <div class="info-text">
+                <h3>Description</h3>
+                <p>Chambers Bay will provide players with a world-class golf experience unmatched in the Pacific Northwest. The links design, terrain, elevation changes, natural beauty and panoramic views of Puget Sound of will make Chambers Bay a "must play" for Pierce County residents, visitors and tourists.</p>
+                <h3>Fun things to do</h3>
+                <ul>
+                    <li>○ Waterfront View</li>
+                    <li>○ Golf Course</li>
+                    <li>○ Good For Kids</li>
+                    <li>○ Private Lot Parking</li>
+                    <li>○ Bike Parking</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of info1 modal -->
+
+<!-- start of info2 modal -->
+<div id="info2-content">
+    <a href="#place" class="close"></a>
+    <div id="info2-inner">
+        <h2>Playground Sound</h2>
+        <div class="info-button">
+            <a href="#" class="btn-purple">4952 Grandview Dr W University Place, WA 98467</a>
+        </div>
+        <h4><span>Distance:</span> 2.2 Miles</h4>
+        <div class="info-box">
+            <div class="info-image-box">
+                <img src="img/playground1.jpeg" alt="Playground By The Sound image">
+                <img src="img/playground2.jpeg" alt="Playground By The Sound image">
+                <img src="img/playground3.jpeg" alt="Playground By The Sound image">
+                <img src="img/playground4.jpeg" alt="Playground By The Sound image">
+            </div>
+            <div class="info-text">
+                <h3>Description</h3>
+                <p>The 12,000 square foot playground is one of the largest in the community and includes swings, tunnels, nets, bridges, slides, monkey bars, climbing walls and rocks. The playground includes elements that are ADA accessible with a segregated area for toddlers and a protective perimeter around the entire playground.</p>
+                <h3>Fun things to do</h3>
+                <ul>
+                    <li>○ Good For Kids</li>
+                    <li>○ Street Parking, Private Lot Parking</li>
+                    <li>○ Gender-Neutral Restrooms</li>
+                    <li>○ Bike Parking</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of info2 modal -->
+
+<!-- start of info3 modal -->
+<div id="info3-content">
+    <a href="#place" class="close"></a>
+    <div id="info3-inner">
+        <h2>Titlow Beach</h2>
+        <div class="info-button">
+            <a href="#" class="btn-purple">8425 6th Ave Tacoma, WA 98406</a>
+        </div>
+        <h4><span>Distance:</span> 1.0 Miles</h4>
+        <div class="info-box">
+            <div class="info-image-box">
+                <img src="img/titlow4.jpeg" alt="titlow beach image">
+                <img src="img/titlow3.jpeg" alt="titlow beach image">
+                <img src="img/titlow2.jpeg" alt="titlow beach image">
+                <img src="img/titlow1.jpeg" alt="titlow beach image">
+            </div>
+            <div class="info-text">
+                <h3>Description</h3>
+                <p>The extensive beach frontage and estuary lagoon serve as the focal point to park visitors. Other site amenities include tennis and basketball courts, playfields, trails, sprayground, playground and picnic areas.</p>
+                <h3>Fun things to do</h3>
+                <ul>
+                    <li>○ Good For Kids</li>
+                    <li>○ Private Lot Parking</li>
+                    <li>○ Bike Parking</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of info3 modal -->
+
+<!-- start of info4 modal -->
+<div id="info4-content">
+    <a href="#place" class="close"></a>
+    <div id="info4-inner">
+        <h2>Curran Apple Orchard</h2>
+        <div class="info-button">
+            <a href="#" class="btn-purple">3920 Grandview Dr W University Place, WA 98466</a>
+        </div>
+        <h4><span>Distance:</span> 1.3 Miles</h4>
+        <div class="info-box">
+            <div class="info-image-box">
+                <img src="img/curran1.jpeg" alt="curran apple orchard image">
+                <img src="img/curran2.jpeg" alt="curran apple orchard image">
+                <img src="img/curran3.jpeg" alt="curran apple orchard image">
+                <img src="img/curran4.jpeg" alt="curran apple orchard image">
+            </div>
+            <div class="info-text">
+                <h3>Description</h3>
+                <p>Cute park and set in the spirit of a food forest in which when the apples are ripe you can pick some. A few apple trees have signs on them asking you not to pick them as each tree is cared for locally which gives them the discretion for this I imagine. There is fun statues and signs going over the history of the park. There is even a small stage where concerts are held. Even if the apples aren't ripe for picking it's still a great park to stroll through.</p>
+                <h3>Fun things to do</h3>
+                <ul>
+                    <li>○ Good For Kids</li>
+                    <li>○ Private Lot Parking</li>
+                    <li>○ Bike Parking</li>
+                    <li>○ Apple Picking</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of info4 modal -->
+
+<!-- start of info5 modal -->
+<div id="info5-content">
+    <a href="#place" class="close"></a>
+    <div id="info5-inner">
+        <h2>Sapporo Steakhouse</h2>
+        <div class="info-button">
+            <a href="#" class="btn-purple">3810 Bridgeport Way W University Place, WA 98466</a>
+        </div>
+        <h4><span>Distance:</span> 1.6 Miles</h4>
+        <div class="info-box">
+            <div class="info-image-box">
+                <img src="img/sapporo1.jpeg" alt="sapporo steakhouse image">
+                <img src="img/sapporo2.jpeg" alt="sapporo steakhouse image">
+                <img src="img/sapporo3.jpeg" alt="sapporo steakhouse image">
+                <img src="img/sapporo4.jpeg" alt="sapporo steakhouse image">
+            </div>
+            <div class="info-text">
+                <h3>Description</h3>
+                <p>Sapporo Steakhouse is a casual Japanese Steakhouse with steak, seafood and sushi. Where it is moderately priced with family style service, it has a relaxing and lively environment to dine in. Sapporo Steakhouse is to be the premium location for Japanese sushi and hibachi in the area, by our great pride in our quality food and friendly, responsive service.</p>
+                <h3>Fun things to do</h3>
+                <ul>
+                    <li>○ Takes Reservations</li>
+                    <li>○ Premium Food</li>
+                    <li>○ Offers Takeout</li>
+                    <li>○ Offers Delivery</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of info5 modal -->
+
+<!-- start of info6 modal -->
+<div id="info6-content">
+    <a href="#place" class="close"></a>
+    <div id="info6-inner">
+        <h2>Thirsty Hound Drinkery</h2>
+        <div class="info-button">
+            <a href="#" class="btn-purple">1905 Bridgeport Way W Ste 112 University Place, WA 98466</a>
+        </div>
+        <h4><span>Distance:</span> 1.1 Miles</h4>
+        <div class="info-box">
+            <div class="info-image-box">
+                <img src="img/thirsty1.jpeg" alt="Thirsty Hound Drinkery image">
+                <img src="img/thirsty2.jpeg" alt="Thirsty Hound Drinkery image">
+                <img src="img/thirsty3.jpeg" alt="Thirsty Hound Drinkery image">
+                <img src="img/thirsty4.jpeg" alt="Thirsty Hound Drinkery image">
+            </div>
+            <div class="info-text">
+                <h3>Description</h3>
+                <p>Thirsty Hound Drinkery is a casual neighborhood bar located in the University Place WA. We are a full service bar serving food, beer, wine, and spirits with lots of care from our staff.</p>
+                <h3>Fun things to do</h3>
+                <ul>
+                    <li>○ Premium Food</li>
+                    <li>○ Offers Takeout</li>
+                    <li>○ Masks Required</li>
+                    <li>○ 21 Under/Over</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of info6 modal -->
+
+<!-- start of info7 modal -->
+<div id="info7-content">
+    <a href="#place" class="close"></a>
+    <div id="info7-inner">
+        <h2>Boathouse 19</h2>
+        <div class="info-button">
+            <a href="#" class="btn-purple">9001 S 19th St Tacoma, WA 98466</a>
+        </div>
+        <h4><span>Distance:</span> 0.9 Miles</h4>
+        <div class="info-box">
+            <div class="info-image-box">
+                <img src="img/boathouse1.jpeg" alt="boathouse 19 image">
+                <img src="img/boathouse2.jpeg" alt="boathouse 19 image">
+                <img src="img/boathouse3.jpeg" alt="boathouse 19 image">
+                <img src="img/boathouse4.jpeg" alt="boathouse 19 image">
+            </div>
+            <div class="info-text">
+                <h3>Description</h3>
+                <p>The old Day Island Bridge now serves as our bar top, and vintage Nalley Valley Pickle barrels have a second life as our table tops. Hanging out with friends, grabbing a bite to eat, or just gazing at the view, we hope Boathouse 19 becomes part of your history, too!</p>
+                <h3>Fun things to do</h3>
+                <ul>
+                    <li>○ Waterfront View</li>
+                    <li>○ Premium Food</li>
+                    <li>○ Offers Delivery</li>
+                    <li>○ Offers Takeout</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of info7 modal -->
+
+<!-- start of info8 modal -->
+<div id="info8-content">
+    <a href="#place" class="close"></a>
+    <div id="info8-inner">
+        <h2>Happy Duo Cafe</h2>
+        <div class="info-button">
+            <a href="#" class="btn-purple">3609 Market Pl W Ste 101 University Place, WA 98466</a>
+        </div>
+        <h4><span>Distance:</span> 1.3 Miles</h4>
+        <div class="info-box">
+            <div class="info-image-box">
+                <img src="img/happyduo1.jpeg" alt="happy duo cafe image">
+                <img src="img/happyduo2.jpeg" alt="happy duo cafe image">
+                <img src="img/happyduo3.jpeg" alt="happy duo cafe image">
+                <img src="img/happyduo4.jpeg" alt="happy duo cafe image">
+            </div>
+            <div class="info-text">
+                <h3>Description</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque molestiae similique id dolor odit nesciunt facere veritatis reprehenderit eveniet error!</p>
+                <h3>Fun things to do</h3>
+                <ul>
+                    <li>○ Beatiful Vibe</li>
+                    <li>○ Bookstore & Study</li>
+                    <li>○ Offers Delivery</li>
+                    <li>○ Offers Takeout</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of info8 modal -->
+
+<!-- --------------------- MODALS -------------------- -->
+</body>
+</html>
