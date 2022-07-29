@@ -1277,6 +1277,7 @@ body {
 
     /* Showcase Section */
     .showcase {
+        background-attachment: scroll;
         height: 100vh;
     }
 
